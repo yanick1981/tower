@@ -10,8 +10,8 @@
       when: ansible_distribution == "CentOS"
 #    - name: install python-pip
 #      yum: name=python3-pip state=present update_cache=yes
- #   - name: Install docker python
- #     pip: name=docker-py
+     - name: Install docker python
+       pip: name=docker-py state=absent
   tasks:
     - name: Create Apache container
       docker_container:
